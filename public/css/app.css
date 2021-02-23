@@ -10944,3 +10944,11 @@ a.text-dark:focus {
   }
 }
 
+.card_box {
+  margin: 2rem;
+}
+
+.card_box .post_card {
+  background-color: #f6993f;
+}
+

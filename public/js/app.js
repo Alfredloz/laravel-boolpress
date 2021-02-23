@@ -2003,7 +2003,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -6480,7 +6479,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".card[data-v-38048495] {\n  margin: 2rem;\n}", ""]);
+exports.push([module.i, "", ""]);
 
 // exports
 
@@ -38376,8 +38375,8 @@ var render = function() {
       { staticClass: "row justify-content-center" },
       _vm._l(_vm.posts, function(post) {
         return _c("div", { staticClass: "col-md-8" }, [
-          _c("div", { staticClass: "card" }, [
-            _c("div", { staticClass: "card-header bg-secondary text-light" }, [
+          _c("div", { staticClass: "card card_box" }, [
+            _c("div", { staticClass: "card-header post_card text-light" }, [
               _vm._v(_vm._s(post.title))
             ]),
             _vm._v(" "),

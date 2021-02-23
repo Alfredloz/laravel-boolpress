@@ -2,9 +2,8 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8" v-for="post in posts">
-                <div class="card">
-                    <div class="card-header bg-secondary text-light">{{ post.title}}</div>
-
+                <div class="card card_box">
+                    <div class="card-header post_card text-light">{{ post.title}}</div>
                     <div class="card-body">
                         {{post.body}}
                     </div>
@@ -35,7 +34,7 @@
     }
 </script>
 <style lang="scss" scoped>
-    .card{
-        margin: 2rem;
-    }
+    // .card{
+    //     margin: 2rem;
+    // }
 </style>
