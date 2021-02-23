@@ -18,7 +18,7 @@ class PageController extends Controller
 
     public function contacts()
     {
-        return view('pages.contacts ');
+        return view('pages.contacts');
     }
     
     public function post_api()

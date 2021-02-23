@@ -21,6 +21,7 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('posts-component', require('./components/PostsComponent.vue').default);
+Vue.component('contacts-component', require('./components/ContactsComponent.vue').default);
 
 
 

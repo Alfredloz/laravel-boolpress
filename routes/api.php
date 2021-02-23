@@ -1,6 +1,7 @@
 <?php
 
 use App\Post;
+use App\Contact;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,5 +21,11 @@ Route::get('posts',  function ()
 {
     return response()->json([
        'data'=>Post::all()
+    ], 200);
+});
+Route::get('contacts',  function ()
+{
+    return response()->json([
+       'data'=>Contact::all()
     ], 200);
 });
