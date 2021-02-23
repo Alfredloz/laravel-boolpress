@@ -25,8 +25,8 @@
                 <li class="nav-item {{ Route::currentRouteName() === 'contacts'? 'active': '' }}">
                   <a class="nav-link" href="{{ route('contacts') }}">Contacts</a>
               </li>
-              <li class="nav-item {{ Route::currentRouteName() === 'post.index'? 'active': '' }}">
-                  <a class="nav-link" href="{{ route('post_api') }}">Posts</a>
+              <li class="nav-item {{ Route::currentRouteName() === 'posts.index'? 'active': '' }}">
+                  <a class="nav-link" href="{{ route('posts.index') }}">Posts</a>
               </li>
             </ul>
         </nav>
