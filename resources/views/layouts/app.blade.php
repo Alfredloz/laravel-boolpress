@@ -26,7 +26,7 @@
                   <a class="nav-link" href="{{ route('contacts') }}">Contacts</a>
               </li>
               <li class="nav-item {{ Route::currentRouteName() === 'posts.index'? 'active': '' }}">
-                  <a class="nav-link" href="{{ route('posts.index') }}">Posts</a>
+                  <a class="nav-link" href="{{ route('post_api') }}">Posts</a>
               </li>
             </ul>
         </nav>

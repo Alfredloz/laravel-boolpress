@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="row justify-content-center" v-for="contact in contacts">
-            <div class="card text-center">
+            <div class="card text-center card_box">
                 <div class="card-header">
                     <img v-bind:src="contact.img" alt="">
                 </div>

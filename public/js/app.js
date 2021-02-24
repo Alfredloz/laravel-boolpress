@@ -38381,7 +38381,7 @@ var render = function() {
     { staticClass: "container" },
     _vm._l(_vm.contacts, function(contact) {
       return _c("div", { staticClass: "row justify-content-center" }, [
-        _c("div", { staticClass: "card text-center" }, [
+        _c("div", { staticClass: "card text-center card_box" }, [
           _c("div", { staticClass: "card-header" }, [
             _c("img", { attrs: { src: contact.img, alt: "" } })
           ]),

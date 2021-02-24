@@ -10944,11 +10944,25 @@ a.text-dark:focus {
   }
 }
 
+main h1 {
+  text-align: center;
+}
+
 .card_box {
-  margin: 2rem;
+  margin: 5rem;
+  width: 30rem;
+}
+
+.card_box img {
+  width: 20rem;
+  height: auto;
 }
 
 .card_box .post_card {
+  background-color: #f6993f;
+}
+
+.card_box .card-footer {
   background-color: #f6993f;
 }
 

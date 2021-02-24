@@ -6,12 +6,24 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
-
+ main{
+     h1{
+         text-align: center;
+     }
+ }
 .card_box{
-    margin: 2rem;
-
+    margin: 5rem;
+    width: 30rem;
+    
+    img{
+        width: 20rem;
+        height: auto;
+    }
     .post_card {
         background-color: $orange;
         // margin: 2rem;
+    }
+    .card-footer{
+        background-color: $orange;
     }
 }
