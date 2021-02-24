@@ -4,7 +4,7 @@
 @endsection
 @section('main-content')
 <h1>All posts</h1>
-<a href="{{ route('posts.create') }}" class="btn btn-primary btn-block">Insert new Post</a>
+<a href="{{ route('posts.create') }}" class="btn btn-primary">Insert new Post</a>
 
 <table class="table">
     <thead>
@@ -12,6 +12,7 @@
             <th>ID</th>
             <th>TITLE</th>
             <th>Body</th>
+            <th>Category</th>
             <th>Created at</th>
             <th>Updated at</th>
 
@@ -23,6 +24,7 @@
             <td>{{$post->id}}</td>
             <td>{{$post->title}}</td>
             <td style="display: block; max-width: 150px;" class=" text-truncate">{{$post->body}}</td>
+            <td>{{$post->category->title}}</td>
             <td>{{$post->created_at}}</td>
             <td>{{$post->updated_at}}</td>
             <td>
