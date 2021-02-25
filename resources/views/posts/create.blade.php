@@ -27,11 +27,14 @@
   @enderror
   <small id="helpId" class="text-muted">Inserisci il titolo del tuo post</small>
   <h5>Seleziona la tua categoria</h5>
-  <select name="category" id="category_create">
+  <select name="category_id" id="category_create">
     <option value="">All</option>
     @foreach ($categories as $cat)
-        <option value="{{ $cat->id }}">{{ $cat->title }}</option>
-    @endforeach
+        <option  value="{{ $cat->id }}" @if ($cat->id == $cat->title)
+            selected
+        @endif >{{ $cat->title }}</option>
+        
+        @endforeach
   </select>
   <br>
   <label for="body">Boby del Post</label>

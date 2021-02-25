@@ -17,6 +17,9 @@
   <br>
   <label for="body">Boby del Post</label>
   <textarea style="resize: none" name="body" id="body" cols="30" rows="10" class="form-control">{{ $post->body }}</textarea>
+  <select name="category_id" id="category_create">
+    {{-- <option value="">{{ $category->title }}</option> --}}
+  </select>
   @error('body')
   <div class="alert alert-danger">{{ $message }}</div>
 @enderror
