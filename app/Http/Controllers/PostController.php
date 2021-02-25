@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use App\Category;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -24,8 +25,9 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        return view('posts.create');
+    {   
+        $categories = Category::all();
+        return view('posts.create', compact('categories'));
 
     }
 
@@ -40,6 +42,7 @@ class PostController extends Controller
         $data = $request->validate([
             'title' => 'required|unique:posts|max:255',
             'body' => 'required',
+            'category_id' => 'required',
         ]);
         Post::create($data);
 

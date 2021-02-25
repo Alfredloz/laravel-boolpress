@@ -26,6 +26,13 @@
       <div class="alert alert-danger">{{ $message }}</div>
   @enderror
   <small id="helpId" class="text-muted">Inserisci il titolo del tuo post</small>
+  <h5>Seleziona la tua categoria</h5>
+  <select name="category" id="category_create">
+    <option value="">All</option>
+    @foreach ($categories as $cat)
+        <option value="{{ $cat->id }}">{{ $cat->title }}</option>
+    @endforeach
+  </select>
   <br>
   <label for="body">Boby del Post</label>
   <textarea style="resize: none" name="body" id="body" cols="30" rows="10" class="form-control">{{ old('body') }}</textarea>
