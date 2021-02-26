@@ -30,10 +30,7 @@
   <select name="category_id" id="category_create">
     <option value="">All</option>
     @foreach ($categories as $cat)
-        <option  value="{{ $cat->id }}" @if ($cat->id == $cat->title)
-            selected
-        @endif >{{ $cat->title }}</option>
-        
+        <option  value="{{ $cat->id }}" >{{ $cat->title }}</option>
         @endforeach
   </select>
   <br>
@@ -48,3 +45,7 @@
   <input type="submit" value="Invia" class="form-control btn-primary">
 </form>
 @endsection 
+
+{{-- @if ($cat->id == $cat->title)
+            selected
+        @endif     codice all'interno del tag option per il selected, aggiunta dei dati funziona anche senza questo! -->

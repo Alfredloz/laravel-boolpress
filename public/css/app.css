@@ -10949,8 +10949,9 @@ main h1 {
 }
 
 .card_box {
-  margin: 5rem;
-  width: 30rem;
+  margin: auto;
+  width: 80%;
+  margin: 10rem auto;
 }
 
 .card_box img {

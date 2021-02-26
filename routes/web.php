@@ -14,9 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'PageController@home')->name('home');
-Route::get('about', 'PageController@about')->name('about');
-Route::get('contact', 'PageController@contacts')->name('contacts');
-Route::get('post_api', 'PageController@post_api')->name('post_api');
+Route::get('/about', 'PageController@about')->name('about');
+Route::get('/contact', 'PageController@contacts')->name('contacts');
+// Route::get('post_api', 'PageController@post_api')->name('post_api');
+Route::get('/posts_php', 'PageController@posts_php')->name('posts_php');
 
 
 Route::resource('posts', 'Postcontroller');

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Post;
 class PageController extends Controller
 {
     public function home()
@@ -24,5 +24,10 @@ class PageController extends Controller
     public function post_api()
     {
         return view('spa.posts');
+    }
+    public function posts_php()
+    {
+        $posts = Post::latest()->get();
+        return view('pages.posts', compact('posts'));
     }
 }

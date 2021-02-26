@@ -42,7 +42,7 @@ class PostController extends Controller
         $data = $request->validate([
             'title' => 'required|unique:posts|max:255',
             'body' => 'required',
-            'category_id' => 'required',
+            'category_id' => 'exists:category_id,id',
         ]);
         Post::create($data);
 
@@ -70,9 +70,10 @@ class PostController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $post, Category $category)
-    {
-        return view('posts.edit', compact('post', 'category'));
+    public function edit(Post $post)
+    {   
+        $categories = Category::all();
+        return view('posts.edit', compact('post', 'categories'));
 
     }
 
