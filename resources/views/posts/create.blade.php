@@ -34,6 +34,16 @@
         @endforeach
   </select>
   <br>
+  <div class="tag_title">
+    <label for="tags">Tags</label>
+  </div>
+  <select name="tags[]" id="tags_create" multiple class="form-control">
+    <option value="">All</option>
+    @foreach ($tags as $tag)
+        <option  value="{{ $tag->id }}" >{{ $tag->name }}</option>
+        @endforeach
+  </select>
+  <br>
   <label for="body">Boby del Post</label>
   <textarea style="resize: none" name="body" id="body" cols="30" rows="10" class="form-control">{{ old('body') }}</textarea>
   {{-- messaggio di error vicino alla textarea --}}
@@ -46,6 +56,3 @@
 </form>
 @endsection 
 
-{{-- @if ($cat->id == $cat->title)
-            selected
-        @endif     codice all'interno del tag option per il selected, aggiunta dei dati funziona anche senza questo! -->

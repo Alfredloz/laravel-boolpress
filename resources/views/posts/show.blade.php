@@ -15,7 +15,20 @@
             <p>{{ $post->body }}</p>
             <p>Creato il: {{$post->created_at}}</p>
             <p>Aggiornato il: {{$post->updated_at}}</p>    
-            <footer class="blockquote-footer">Categoria: {{ $post->category->title }}</footer>
+            <footer class="blockquote-footer">
+              <p>Categoria: {{ $post->category->title }}</p>
+              <p>
+                @if (count($post->tags) > 0)
+                <p>Tags: </p>
+                  @foreach ($post->tags as $tag)
+                      <span> {{  $tag->name  }}</span>
+                  @endforeach  
+                  @else
+                  <span>nessun tag</span>
+                @endif
+
+              </p>
+            </footer>
           </blockquote>
         </div>
       </div>

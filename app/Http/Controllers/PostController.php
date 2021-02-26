@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use App\Category;
+use App\Tag;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -27,7 +28,8 @@ class PostController extends Controller
     public function create()
     {   
         $categories = Category::all();
-        return view('posts.create', compact('categories'));
+        $tags = Tag::all();
+        return view('posts.create', compact('categories', 'tags'));
 
     }
 
@@ -38,17 +40,19 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {   
+        // dd($request->all()); ---> per veder array dei tag su create.blade
         $data = $request->validate([
             'title' => 'required|unique:posts|max:255',
             'body' => 'required',
-            'category_id' => 'exists:category_id,id',
+            'category_id' => 'required',
+            'tags' => 'exists:tags,id'
         ]);
         Post::create($data);
 
 
         $post = Post::orderBy('id', 'desc')->first();
-
+        $post->tags()->attach($request->tags);    
         return redirect()->route('posts.show', $post);
     }
 
