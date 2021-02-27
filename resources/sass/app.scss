@@ -11,6 +11,17 @@
          text-align: center;
      }
  }
+.contact_card{
+    width: 30rem;
+    margin: 2rem;
+    img{
+        width: 15rem;
+        height: 15rem;
+    }
+    .card-footer{
+        background-color: $orange;
+    }
+}
 .card_box{
     margin: auto;
     width: 80%;

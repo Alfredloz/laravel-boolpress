@@ -13,6 +13,7 @@
             <th>TITLE</th>
             <th>Body</th>
             <th>Category</th>
+            <th>Tags</th>
             <th>Created at</th>
             <th>Updated at</th>
 
@@ -25,6 +26,11 @@
             <td>{{$post->title}}</td>
             <td style="display: block; max-width: 150px;" class=" text-truncate">{{$post->body}}</td>
             <td>{{$post->category->title}}</td>
+            <td>
+                @foreach ($post->tags as $tag)
+                <span> {{  $tag->name  }}</span>
+                @endforeach 
+            </td>
             <td>{{$post->created_at}}</td>
             <td>{{$post->updated_at}}</td>
             <td>

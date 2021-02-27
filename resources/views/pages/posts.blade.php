@@ -13,6 +13,11 @@
       <blockquote class="blockquote mb-0">
         <p>{{ $post->body }}</p>
         <footer class="blockquote-footer">Categoria: {{ $post->category->title }}</footer>
+        <footer class="blockquote-footer">Tags: 
+          @foreach ($post->tags as $tag)
+          <span> {{  $tag->name  }}</span>
+          @endforeach 
+        </footer>
       </blockquote>
     </div>
   </div>
